@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Crossy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Crossy\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+﻿@model VFlightNetwork.Data.Models.Login.LoginPageModel
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en" class="full-height">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="site description here">
+    <meta name="keywords" content="vflight, flight simulation, flight sim, flying, planes, flight network, realism">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
+    <link href="~/css/Login/Login.css" rel="stylesheet">
+    <link href="~/css/Layout/style.css" rel="stylesheet"/>
+
+    <title>VFlight - Login</title>
+</head>
+
+<body>
+    <!-- Notification Shown-->
+    <div aria-live="polite" aria-atomic="true" style="position: absolute; right: 1%; top: 1%; min-width: 350px; z-index: 5">
+        <!-- Then put toasts within -->
+        @if (Model.Notification != null)
+        {
+            <div class="toast @Model.Notification.Type" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="5000">
+                <div class="toast-body">
+                    <i class="fa fa-user pr-2"></i>
+                    @Model.Notification.Text
+                </div>
+            </div>
+        }
+    </div>
+
+    <div style="height: 100vh">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="container-fluid">
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-4 col-lg-3 mb-5 mt-5">
+
+                        <div class="card rounded-0 elegant-color">
+                            <div class="card-header p-0">
+                                <div class="list-group d-flex flex-row" role="tablist">
+                                    <a class="list-group-item list-group-item-action active rounded-0 text-center" data-toggle="list" href="#login" role="tab">Login</a>
+                                    <a class="list-group-item list-group-item-action rounded-0 text-center" data-toggle="list" href="#register" role="tab">Register</a>
+                                </div>
+                            </div>
+
+                            <div class="card-body px-md-3 px-lg-4">
+                                <div class="text-center">
+                                    <img src="~/images/Logo/vflight-logo.png" width='200px' class="img-fluid pt-3">
+                                </div>
+
+
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                                        {
+                                            <div class="md-form py-2 my-2">
+                                                <!-- Email -->
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <label asp-for="LoginDetails.Username" class="control-label"></label>
+                                                <input asp-for="LoginDetails.Username" class="form-control" />
+                                                <span asp-validation-for="LoginDetails.Username" class="text-danger"></span>
+                                            </div>
+                                            <div class="md-form py-2 my-2">
+                                                <!-- Password -->
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <label asp-for="LoginDetails.Password" class="control-label"></label>
+                                                <input type="password" asp-for="LoginDetails.Password" class="form-control" />
+                                                <span asp-validation-for="LoginDetails.Password" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6 d-flex align-items-center">
+                                                    <!-- Default unchecked -->
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" name="StayLoggedIn" id="defaultUnchecked" value="1">
+                                                        <label class="custom-control-label text-white" for="defaultUnchecked">Remember me</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="text-center text-lg-right">
+                                                        <button class="btn btn btn-vflight z-depth-0" type="submit">Login</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="register" role="tabpanel">
+                                        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                                        {
+                                            <div class="form-row md-form py-2 my-2 mx-0">
+                                                <div class="col p-0">
+                                                    <!-- First name -->
+                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                    <label asp-for="RegisterDetails.FirstName" class="control-label"></label>
+                                                    <input asp-for="RegisterDetails.FirstName" class="form-control" />
+                                                    <span asp-validation-for="RegisterDetails.FirstName" class="text-danger"></span>
+                                                </div>
+
+                                                <div class="col">
+                                                    <!-- Last name -->
+                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                    <label asp-for="RegisterDetails.LastName" class="control-label"></label>
+                                                    <input asp-for="RegisterDetails.LastName" class="form-control" />
+                                                    <span asp-validation-for="RegisterDetails.LastName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="md-form py-2 my-2">
+                                                <!-- Username -->
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <label asp-for="RegisterDetails.Username" class="control-label"></label>
+                                                <input asp-for="RegisterDetails.Username" class="form-control" />
+                                                <span asp-validation-for="RegisterDetails.Username" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="md-form py-2 my-2">
+                                                <!-- Email -->
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <label asp-for="RegisterDetails.Email" class="control-label"></label>
+                                                <input asp-for="RegisterDetails.Email" class="form-control" />
+                                                <span asp-validation-for="RegisterDetails.Email" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="md-form py-2 my-2">
+                                                <!-- Password -->
+                                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                <label asp-for="RegisterDetails.Password" class="control-label"></label>
+                                                <input asp-for="RegisterDetails.Password" class="form-control" />
+                                                <span asp-validation-for="RegisterDetails.Password" class="text-danger"></span>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-12 col-lg-12 d-flex align-items-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <!-- Terms and Conditions -->
+                                                        <input type="checkbox" class="custom-control-input" id="TermsAndConditionsCheckbox">
+                                                        <label class="custom-control-label text-white" for="TermsAndConditionsCheckbox">
+                                                            I agree to the
+                                                            <a class="text-decoration-none" href="#" target="_blank">Privacy Policy</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 col-lg-12 pt-2 mt-2">
+                                                    <div class="text-center">
+                                                        <button class="btn btn btn-vflight z-depth-0 m-0">Create account</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer elegant-color-dark p-0 text-center">
+                                <button type="button" class="btn btn-link text-white-50">Forgotten password?</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small grey darken-4 py-4 fixed-bottom">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 d-md-flex justify-content-start">
+                    <div class="footer-copyright text-center bg-transparent">
+                        Copyright VFlight © All Rights Reserved
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+                    <ul class="list-unstyled d-flex mb-0">
+                        <li>
+                            <a class="mr-3" role="button" href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                        </li>
+                        <li>
+                            <a class="mr-3" role="button" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a class="" role="button" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer -->
+    <!-- Jarallax -->
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+
+    <!-- Include it if you want to use Video parallax -->
+    <!--    <script src="https://unpkg.com/jarallax@1/dist/jarallax-video.min.js"></script>-->
+    <!-- Include it if you want to parallax any element -->
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax-element.min.js"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
+
+
+    <!-- WoW Animations -->
+    <script type="text/javascript">
+        new WOW().init();
+    </script>
+
+    <script>
+        $('.toast').toast('show');
+    </script>
+</body>
+</html>

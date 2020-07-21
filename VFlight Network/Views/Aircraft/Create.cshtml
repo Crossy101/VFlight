@@ -1,0 +1,166 @@
+﻿@model VFlightNetwork.Data.Models.Aircraft.ViewModels.AircraftCreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeaderFiles {
+    <link rel="stylesheet" href="~/css/Operations/Index.css" />
+}
+
+<!-- Notification Shown-->
+<div aria-live="polite" aria-atomic="true" style="position: absolute; right: 1%; top: 1%; min-width: 350px; z-index: 5">
+    <!-- Then put toasts within -->
+    @if (Model.Notification != null)
+    {
+        <div class="toast @Model.Notification.Type" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="true" data-delay="5000">
+            <div class="toast-body">
+                <i class="fa fa-user pr-2"></i>
+                @Model.Notification.Text
+            </div>
+        </div>
+    }
+</div>
+
+<h4>Aircraft Creation</h4>
+
+<section class="my-2 py-2">
+    <div class="row">
+
+        <div class="col-12 text-white">
+            <h2 class="text-uppercase">Aircraft Operations</h2>
+            <div>
+                <a class="btn btn-primary float-right" asp-action="Index">Back to List</a>
+            </div>
+        </div>
+        <div class="col-12 mt-3">
+
+            <!-- Classic tabs -->
+            <div class="classic-tabs">
+
+                <ul class="nav vflight-header-color" id="myClassicTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link  waves-light active show" id="profile-tab-classic" data-toggle="tab" href="#profile-classic" role="tab" aria-controls="profile-classic" aria-selected="true">Aircraft</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content  rounded-bottom vflight-body-color" id="myClassicTabContent">
+                    <div class="tab-pane fade active show" id="profile-classic" role="tabpanel" aria-labelledby="profile-tab-classic">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card bg-none z-depth-0">
+                                    <div class="card-body p-0">
+                                        <div class="col-12">
+                                            <div class="card bg-none z-depth-0">
+                                                <div class="card-body p-0">
+                                                    <div class="col-12">
+                                                        <form asp-action="Create">
+                                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                            <div id="aircraftOperations-aircraft-search-result" style="padding-top: 1%; width: 100%;" class="col-12">
+                                                                <label style="color: white;">Aircraft Search</label>
+                                                                <input asp-for="AircraftType" type="text" name="AircraftType" id="aircraftOperations-aircraft-search" class="form-control mb-4" placeholder="A320-100">
+                                                                <span asp-validation-for="AircraftType" class="text-danger"></span>
+                                                            </div>
+                                                            <div id="aircraftOperations-airline-search-result" style="width: 100%;" class="col-12">
+                                                                <label style="color: white;">Airline Search</label>
+                                                                <input asp-for="Airline" type="text" name="Airline" id="aircraftOperations-airline-search" class="form-control mb-4" placeholder="British Airways">
+                                                                <span asp-validation-for="Airline" class="text-danger"></span>
+                                                            </div>
+                                                            <button class="btn btn-success" type="submit">Create Aircraft</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        //Aircraft Page Search
+        $(document).ready(function () {
+            $("#aircraftOperations-aircraft-search").autocomplete({
+                minLength: 2,
+                delay: 1000,
+                maxShowItems: 5,
+                source: function (request, response) {
+                    $.ajax({
+                        url: "@Url.Action("SearchAircraftTypes", "Search")",
+                        type: "GET",
+                        dataType: "json",
+                        data: { term: request.term },
+                        success: function (data) {
+
+                            if(!data.length){
+                                var result = [
+                                    {
+                                        label: 'No Results Found!',
+                                    }
+                                ];
+                                response(result);
+                            }
+                            else{
+                            // normal response
+                                response($.map(data, function (item) {
+                                    return { label: item.icao + " - " + item.name, value: item.name, id: item.id };
+                                }));
+                            }
+                        }
+                    })
+                },
+                open: function () {
+                    $("#ui-id-1").addClass("list-group text-white px-3 vflight-suggested-result-box");
+                    $("#ui-id-1 li").addClass("list-group-item p-3 vflight-header-color vflight-suggested-result");
+                },
+                appendTo: '#aircraftOperations-aircraft-search-result'
+            });
+        })
+
+        $(document).ready(function () {
+            $("#aircraftOperations-airline-search").autocomplete({
+                minLength: 2,
+                delay: 1000,
+                maxShowItems: 5,
+                source: function (request, response) {
+                    $.ajax({
+                        url: "@Url.Action("SearchAirlines", "Search")",
+                        type: "GET",
+                        dataType: "json",
+                        data: { term: request.term },
+                        success: function (data) {
+
+                            if(!data.length){
+                                var result = [
+                                    {
+                                        label: 'No Results Found!',
+                                    }
+                                ];
+                                response(result);
+                            }
+                            else{
+                            // normal response
+                                response($.map(data, function (item) {
+                                    return { label: item.icao + " - " + item.name, value: item.name, id: item.id };
+                                }));
+                            }
+                        }
+                    })
+                },
+                open: function () {
+                    $("#ui-id-2").addClass("list-group text-white px-3 vflight-suggested-result-box");
+                    $("#ui-id-2 li").addClass("list-group-item p-3 vflight-header-color vflight-suggested-result");
+                },
+                appendTo: '#aircraftOperations-airline-search-result'
+            });
+        })
+    </script>
+}

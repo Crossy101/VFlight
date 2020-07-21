@@ -1,0 +1,11 @@
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\bin\Release\netcoreapp3.1\VFlightNetwork.Shared.deps.json
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\bin\Release\netcoreapp3.1\VFlightNetwork.Shared.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\bin\Release\netcoreapp3.1\VFlightNetwork.Shared.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\bin\Release\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\bin\Release\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.csprojAssemblyReference.cache
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.AssemblyInfoInputs.cache
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.AssemblyInfo.cs
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.csproj.CopyComplete
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Shared\obj\Release\netcoreapp3.1\VFlightNetwork.Shared.pdb

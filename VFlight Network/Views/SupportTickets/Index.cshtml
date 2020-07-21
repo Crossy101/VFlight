@@ -1,0 +1,235 @@
+﻿@model VFlightNetwork.Data.Models.Support.SupportModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeaderFiles {
+    <link rel="stylesheet" href="~/css/Support/Index.css" />
+}
+
+    <section class="my-2 py-2">
+        <div class="row">
+
+            <div class="col-12 text-white">
+                <h2>GET IN TOUCH</h2>
+                <p>text needed</p>
+
+            </div>
+
+            <div class="col-12 col-md-6 mt-3">
+                <div class="card text-white vflight-body-color">
+                    <div class="card-header vflight-header-color">
+                        <h5 class="m-0">Contact Us</h5>
+                    </div>
+                    <div class="card-body">
+                        <form class="">
+                            <input type="text" id="contactFormName" class="form-control mb-4 vflight-header-color border-left border-right border-top border-bottom text-white" placeholder="@Model.Username" disabled>
+
+                            <input type="email" id="contactFormEmail" class="form-control mb-4 vflight-header-color border-left border-right border-top border-bottom text-white" placeholder="@Model.Email" disabled>
+
+                            <label for="contactFormSubject" class="text-vflight-gray">Subject</label>
+                            <select id="contactFormSubject" class="browser-default custom-select mb-4 vflight-header-color border-left border-right border-top border-bottom text-white">
+                                <option value="Query" selected="">General Query</option>
+                                <option value="AccountUpgrade">Account Upgrades</option>
+                                <option value="DataError">Data Error</option>
+                                <option value="ReportBug">Report a Bug</option>
+                            </select>
+
+                            <label asp-for="SupportTicket.Message" class="control-label"></label>
+                            <textarea asp-for="SupportTicket.Message" class="form-control rounded-0 vflight-header-color border-left border-right border-top border-bottom text-white" id="contactFormMessage" rows=6 placeholder="Message"></textarea>
+                            <span asp-validation-for="SupportTicket.Message" class="text-danger"></span>
+                            <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 mt-3">
+                <div class="card text-white vflight-body-color">
+                    <div class="card-header vflight-header-color">
+                        <h5 class="m-0">Frequently Asked Questions</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <!--Accordion wrapper-->
+                        <div class="accordion" id="QA-accordion" role="tablist" aria-multiselectable="true">
+
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question1">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion1" aria-expanded="false" aria-controls="CollapseQuestion1">
+                                        <p class=" text-vflight-gray mb-0">
+                                            Which flight simulation games do we support?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion1" class="collapse" role="tabpanel" aria-labelledby="Question1" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        Microsoft Flight Simulator 2020, Microsoft Flight Simulator X, P3D V4 and XPlane 11.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question2">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion2" aria-expanded="false" aria-controls="CollapseQuestion2">
+                                        <p class=" text-vflight-gray mb-0">
+                                            Do we support MacOS?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion2" class="collapse" role="tabpanel" aria-labelledby="Question2" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        Unfortunately, we do not support MacOS. Our client will only run on Windows OS.
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question3">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion3" aria-expanded="false" aria-controls="CollapseQuestion3">
+                                        <p class=" text-vflight-gray mb-0">
+                                            How do we track you flight progress?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion3" class="collapse" role="tabpanel" aria-labelledby="Question3" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        You need to download our desktop client program from our download centre.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question4">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion4" aria-expanded="false" aria-controls="CollapseQuestion4">
+                                        <p class=" text-vflight-gray mb-0">
+                                            If my game crashes what happens to my flight?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion4" class="collapse" role="tabpanel" aria-labelledby="Question4" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        You can still submit your PIREP and this will be manually reviewed by our team.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question5">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion5" aria-expanded="false" aria-controls="CollapseQuestion5">
+                                        <p class=" text-vflight-gray mb-0">
+                                            How many aircraft can I have in my hanger?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion5" class="collapse" role="tabpanel" aria-labelledby="Question5" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        There is no limit to the amount of aircraft you can add.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question6">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion6" aria-expanded="false" aria-controls="CollapseQuestion6">
+                                        <p class=" text-vflight-gray mb-0">
+                                            If I currently fly on another network such as ProjectFly, IVAO or VATSIM, is it possible to transfer my hours?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion6" class="collapse" role="tabpanel" aria-labelledby="Question6" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        Yes absolutely. On your logbook you can request to transfer hours from another network. Simply complete the form and we will update your logbook to include this.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question7">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion7" aria-expanded="false" aria-controls="CollapseQuestion7">
+                                        <p class=" text-vflight-gray mb-0">
+                                            There is some data missing on our website. How do I report it?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion7" class="collapse" role="tabpanel" aria-labelledby="Question7" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        If you discover missing or incorrect information please contact us using the form and select the ‘data error’ option from the drop down.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question8">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion8" aria-expanded="false" aria-controls="CollapseQuestion8">
+                                        <p class=" text-vflight-gray mb-0">
+                                            Can I make a financial contribution towards the community?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion8" class="collapse" role="tabpanel" aria-labelledby="Question8" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        For a small amount each month you can upgrade your account to include a range of additional features.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question9">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion9" aria-expanded="false" aria-controls="CollapseQuestion9">
+                                        <p class=" text-vflight-gray mb-0">
+                                            How do I upgrade my account?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion9" class="collapse" role="tabpanel" aria-labelledby="Question9" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        To upgrade your account simply visit your profile area and select the upgrade account option.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                            <!-- Accordion card -->
+                            <div class="card rounded-0 z-depth-0 border-bottom border-top border-left-0 border-right-0">
+                                <div class="card-header vflight-header-color" role="tab" id="Question10">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#QA-accordion" href="#CollapseQuestion10" aria-expanded="false" aria-controls="CollapseQuestion10">
+                                        <p class=" text-vflight-gray mb-0">
+                                            Is it possible to apply for a role in the community staff team?
+                                            <i class="ml-2 fas fa-angle-right rotate-icon"></i>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="CollapseQuestion10" class="collapse" role="tabpanel" aria-labelledby="Question10" data-parent="#QA-accordion">
+                                    <div class="card-body vflight-body-color">
+                                        From time to time we will advertise a vacancy on our website. If you are a developer and interested in becoming part of our team, please contact us on our Discord server.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card -->
+                        </div>
+                        <!-- Accordion wrapper -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

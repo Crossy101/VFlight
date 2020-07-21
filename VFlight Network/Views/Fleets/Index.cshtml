@@ -1,0 +1,67 @@
+﻿@model IEnumerable<VFlightNetwork.Data.Models.Fleet.Fleet>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section HeaderFiles {
+    <link rel="stylesheet" href="~/css/Fleet/Index.css"/>
+}
+
+    <section class="my-2 py-2">
+        <div class="row ">
+            <div class="col-12 text-white clearfix d-flex align-items-end">
+                <div class="float-left">
+                    <h2 class="text-uppercase">Fleet</h2>
+                    <p class="m-0">text needed</p>
+                </div>
+                <div class="ml-auto">
+                    <button class="btn btn-primary">Add aircraft</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 mt-3">
+                <div class="card text-white vflight-body-color">
+                    <!--
+                                                <div class="card-header vflight-header-color">
+                                                    <h5 class="m-0">Add Aicraft</h5>
+                                                </div>
+                -->
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-3 my-2">
+                                <!-- Card -->
+                                <a href="">
+                                    <div class="card z-depth-0">
+
+                                        <div class="fleet-aicraft-image" style="background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F4%2F40%2FPan_Am_Boeing_747-121_N732PA_Bidini.jpg%2F1200px-Pan_Am_Boeing_747-121_N732PA_Bidini.jpg&f=1&nofb=1');">
+                                        </div>
+
+                                        <div class="card-body text-center p-2 vflight-header-color">
+                                            <h3 class="text-white text-uppercase font-weight-bold mb-2">G-OWST</h3>
+                                            <h5 class="text-white-50 text-monospace text-uppercase m-0">737-800</h5>
+                                        </div>
+
+                                        <div class="card-footer vflight-header-color text-center">
+                                            <div class="row">
+                                                <div class="col-12 col-md-6">
+                                                    <p class="lead m-0" data-toggle="tooltip" title="Hours Flown"> <i class="fa fa-clock blue-text mr-2"></i>152</p>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <p class="lead m-0" data-toggle="tooltip" title="Total Flights"> <i class="fa fa-globe blue-text mr-2"></i>24</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                                <!-- Card -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

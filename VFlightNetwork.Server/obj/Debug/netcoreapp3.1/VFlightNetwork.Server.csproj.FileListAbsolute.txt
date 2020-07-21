@@ -1,0 +1,17 @@
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.deps.json
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.AssemblyInfoInputs.cache
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.AssemblyInfo.cs
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.csprojAssemblyReference.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.deps.json
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.dll
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\bin\Debug\netcoreapp3.1\VFlightNetwork.Server.pdb
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.csprojAssemblyReference.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.csproj.CoreCompileInputs.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.AssemblyInfoInputs.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.AssemblyInfo.cs
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.dll
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Server\obj\Debug\netcoreapp3.1\VFlightNetwork.Server.pdb

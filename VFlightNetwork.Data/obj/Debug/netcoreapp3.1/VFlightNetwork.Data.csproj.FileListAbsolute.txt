@@ -1,0 +1,26 @@
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.deps.json
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfoInputs.cache
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfo.cs
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Callu\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.csprojAssemblyReference.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.deps.json
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.csprojAssemblyReference.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.csproj.CoreCompileInputs.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfoInputs.cache
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfo.cs
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Crossy\source\repos\VFlight Network\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.deps.json
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\bin\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.csprojAssemblyReference.cache
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.csproj.CoreCompileInputs.cache
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfoInputs.cache
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.AssemblyInfo.cs
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.dll
+C:\Users\Crossy\source\repos\VFlightUpdate\VFlightNetwork.Data\obj\Debug\netcoreapp3.1\VFlightNetwork.Data.pdb

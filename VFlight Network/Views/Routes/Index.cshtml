@@ -1,0 +1,102 @@
+﻿@model IEnumerable<VFlightNetwork.Data.Models.Routes.Route>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StartAirportId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndAirportId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AirlineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AircraftId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlightNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PointsCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisabledDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disabled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedUserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreationDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartAirportId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndAirportId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirlineId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AircraftId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlightNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PointsCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisabledDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disabled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

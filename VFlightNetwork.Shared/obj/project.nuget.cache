@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4dBmM66mYeJSUsqhXuU3rod6h8BVtI+HjsVG+22l3mAf0PUI2srwrCEtz4ijpEIeKZmj8y1DW0oabMCzW4T9Tg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Crossy\\source\\repos\\VFlightUpdate\\VFlightNetwork.Shared\\VFlightNetwork.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Crossy\\.nuget\\packages\\csvhelper\\15.0.1\\csvhelper.15.0.1.nupkg.sha512",
+    "C:\\Users\\Crossy\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

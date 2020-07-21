@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"] - VFlight Network</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css">
+    <!-- Layout Style CSS -->
+    <link rel="stylesheet" href="~/css/Layout/style.css" />
+    <!-- LeafletJS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin="" />
+
+    @RenderSection("HeaderFiles", required: false)
+
+</head>
+<body>
+
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fa fa-bars fa-2x"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="#"></a>
+                    <div id="close-sidebar" class="">
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header text-center">
+
+
+                    <img class="rounded-circle avatar-round my-3"
+                         src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Favatarfiles.alphacoders.com%2F670%2F67057.jpg&f=1&nofb=1"
+                         alt="User picture">
+
+
+                    <div class="pt-3">
+                        <p class="text-white font-weight-normal mb-1">@User.Identity.Name</p>
+                        <span class="badge badge-danger z-depth-0">Administrator</span>
+
+
+                        <hr class="my-3" style='background-color: #5a6374;'>
+
+                        <div class="row no-gutters" style="color: #26abff;">
+                            <div class="col-4" data-toggle="tooltip" title="Total flights">
+                                <i class="fa fa- fa-globe"></i>
+                                <p class="count1 mb-1 lead text-white" data-from="0" data-to="24" data-time="1000">24</p>
+                            </div>
+                            <div class="col-4" data-toggle="tooltip" title="Hours flown">
+                                <i class="fa fa-clock"></i>
+                                <p class="count2 mb-1 lead text-white" data-from="0" data-to="152" data-time="1000">152</p>
+                            </div>
+                            <div class="col-4" data-toggle="tooltip" title="Registered aircraft">
+                                <i class="fa fa-plane"></i>
+                                <p class="count3 mb-1 lead text-white" data-from="0" data-to="3" data-time="1000">3</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- sidebar-header  -->
+                <div class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe-europe"></i>
+                                <span>Flights</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Book Now</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Manage Bookings</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Log Book</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-plane-departure"></i>
+                                <span>Hangar</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Add Aircraft</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Fleets")">Manage Aircraft</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                <span>Radar</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://discord.gg/PAfjfGk" target="_blank">
+                                <i class="fas fa-users"></i>
+                                <span>Discord</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-cloud-download-alt"></i>
+                                <span>Downloads</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index", "SupportTickets")">
+                                <i class="fas fa-headset"></i>
+                                <span>Support</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-clipboard-list"></i>
+                                <span>Operations</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Aircraft")">Aircraft</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Aircraft-Types</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Airline")">Airlines</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Index", "Airports")">Airports</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Countries</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Routes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-id-card-alt"></i>
+                                <span>Membership</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Find Member</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Member Stats</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-bullhorn"></i>
+                                <span>Announcements</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Issue NOTAM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Publish Article</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer">
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">4</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-cog"></i>
+                </a>
+                <a href="@Url.Action("Logout", "Account")">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+        <main class="page-content">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+    <!-- sidebar-wrapper  -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
+    <!-- Navbar Javascript -->
+    <script type="text/javascript" src="~/js/Layout/navbar.js"></script>
+    <!-- jQuery UI -->
+    <script type="text/javascript" src="~/js/jQueryUI/jquery-ui.js"></script>
+    <!-- jQuery UI Scrollable Autocomplete -->
+    <script type="text/javascript" src="~/js/jQueryUI/jquery.ui.autocomplete.scroll.min.js"></script>
+    <!-- Notification Library -->
+    <script type="text/javascript" src="~/js/Notification/ohsnap.min.js"></script>
+
+    <!-- LeafletJS Map -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    <script type="text/javascript">
+        // Tooltips Initialization
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
+
+    <script>
+        (function ($) {
+            $.fn.counter = function () {
+                const $this = $(this),
+                    numberFrom = parseInt($this.attr('data-from')),
+                    numberTo = parseInt($this.attr('data-to')),
+                    delta = numberTo - numberFrom,
+                    deltaPositive = delta > 0 ? 1 : 0,
+                    time = parseInt($this.attr('data-time')),
+                    changeTime = 10;
+
+                let currentNumber = numberFrom,
+                    value = delta * changeTime / time;
+                var interval1;
+                const changeNumber = () => {
+                    currentNumber += value;
+                    //checks if currentNumber reached numberTo
+                    (deltaPositive && currentNumber >= numberTo) || (!deltaPositive && currentNumber <= numberTo) ? currentNumber = numberTo : currentNumber;
+                    this.text(parseInt(currentNumber));
+                    currentNumber == numberTo ? clearInterval(interval1) : currentNumber;
+                }
+
+                interval1 = setInterval(changeNumber, changeTime);
+            }
+        }(jQuery));
+
+        $(document).ready(function () {
+
+            $('.count-up').counter();
+            $('.count1').counter();
+            $('.count2').counter();
+            $('.count3').counter();
+
+            new WOW().init();
+
+            setTimeout(function () {
+                $('.count5').counter();
+            }, 3000);
+        });
+    </script>
+
+    <script>
+        $('.toast').toast('show');
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
